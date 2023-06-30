@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+Lib
+Scripts
+.env
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

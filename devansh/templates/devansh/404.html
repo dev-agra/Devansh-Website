@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Found</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <!-- Favicon -->
+    {% load static %}<link style="border-radius: 100%;" rel="icon" href="{% static 'devansh/images/favicon_io/favicon.ico'%}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Staatliches&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    
+    <!-- CSS -->
+    {% load static %}<link rel="stylesheet" href="{% static 'devansh/404.css'%}">
+</head>
+<body>
+    <section class="error">
+        <div class="row row-error">
+            <div class="col-lg-6 col-doggo">
+                {% load static %}<img src="{% static 'devansh/images/404-img.gif' %}" alt="">
+            </div>
+            <div class="col-lg-6 col-404">
+                <h1>404</h1>
+            </div>
+        </div>
+    </section>
+    <section class="error-msg">
+        <span>
+            <p>You've found a page that doesn't exist</p>
+        </span>
+    </section>
+    <section class="error-button">
+        <span>
+            <a href="{% url 'devansh:Home' %}">Homepage</a>
+        </span>
+    </section>
+</body>
+</html>

@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    cursor: default;
+    /* background: linear-gradient(180deg, #16003B 60%, rgb(70, 70, 96)); */
+    background: linear-gradient( #001e30 80%, rgb(51, 175, 209));
+}
+
+.contact-head{
+    text-align: center;
+}
+
+.Menu{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-family: 'Advent Pro', sans-serif;
+    background-color: #001e30;
+    position: relative;
+    height: 10%;
+    margin-bottom: -2rem;
+}
+
+.menu-list{
+    padding: 0;
+    display: flex;
+    background:rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item{
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+.menu-item a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.menu-item a:hover{
+    transform: scale(45px);
+}
+
+.menu-item a::before{
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: #00bcd4;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.menu-item a::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: #f0f;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.menu-item a:hover::before{
+    width: 50%;
+    transform: translateX(90%);
+}
+
+.menu-item a:hover::after{
+    width: 50%;
+    transform: translateX(-90%);
+}
+
+.contact-head h3{
+    font-size: 3rem;
+    /* left: -2rem; */
+    color: white;
+    z-index: -1;
+    font-family: 'Syncopate', sans-serif;
+    letter-spacing: 0.21rem;
+    text-shadow:0 1px 0 #efefef,
+                0 2px 0 #efefef,
+                0 3px 0 #efefef,
+                0 4px 0 #efefef,
+                0 30px 5px rgba(73, 80, 79, 0.1);
+
+    /* animation: float 3s linear infinite;
+    animation-direction: alternate; */
+    margin-bottom: -8rem;
+    margin-top: 2rem;
+}
+
+@keyframes float{
+    from{transform: rotate(5deg);}
+    to{transform: rotate(-5deg);}
+}
+
+@media (max-width: 405px){
+    .contact-head h3{
+        font-size: 2.5rem;
+    }
+
+    .contact{
+        margin-top: -8rem;
+        width: 10rem;
+    }
+
+    .contact-form{
+        width: 10rem;
+    }
+}
+
+@media (max-width: 360px){
+
+    .contact{
+        width: 10rem;
+    }
+
+    .contact-form{
+        width:6rem;
+    }
+}
+
+.contact-body{
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    width: 35rem;
+    padding: 3rem;
+    /* left: 13rem; */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+}
+
+.contact-form{
+    width: 23rem;
+}
+
+.contact-form label{
+    margin-top: 1.1rem;
+    color: black;
+}
+
+.btn-{
+    margin-top: 1.1rem;
+}
+
+
+form input{
+    font-family: 'Raleway', sans-serif;
+}
+
+form textarea{
+    font-family: 'Raleway', sans-serif;
+}
+
+.blob{
+    position: absolute;
+    width: 50rem;
+    height: 45rem;
+    /* background: white; */
+}
+
+.blob:nth-child(2){
+    filter: blur(200px);
+}
+
+.message{
+    padding-top: 1rem;
+    color: white;
+}
+
+.contact-icon-holder{
+    margin-top: 4rem;
+}

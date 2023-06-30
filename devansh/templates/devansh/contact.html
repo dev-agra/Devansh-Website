@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <!-- Favicon -->
+    {% load static %}<link style="border-radius: 100%;" rel="icon" href="{% static 'devansh/images/favicon_io/favicon.ico'%}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=El+Messiri&family=Syncopate:wght@700&family=Viga&family=Ubuntu:wght@700&family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Oswald:wght@700&family=Raleway:ital,wght@1,300;1,600&family=Nunito:wght@900&family=Acme&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    {% load static %}<link rel="stylesheet" href="{% static 'contact.css'%}">
+
+    <!-- Awesome Font -->
+    <script src="https://kit.fontawesome.com/89baad1ea2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section class="Menu" id="Home">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="{% url 'devansh:Home' %}" data-text="home">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'devansh:Contact' %}" data-text="home">Contact</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'devansh:Feedback' %}" data-text="home">Feedback</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'devansh:About' %}" data-text="home">About</a>
+            </li>
+        </ul>
+    </section>
+    <section style="color: white;display: flex; justify-content: center;flex-direction: row;margin-bottom: 1.2rem;" class="message">
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <div style="width: 40%;" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Hey! </strong> {{message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endif %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <div style="width: 40%;" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Hey! </strong> {{message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </section>
+    <section class="contact-all">
+        <div class="contact-head">
+            <h3>Have Projects Ideas?<br>Contact Me!</h3>
+        </div>
+        <div class="contact-body">
+            <div class="blob">
+                <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160%" id="blobSvg">
+                    <defs>
+                      <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: rgb(211, 90, 229);"></stop>
+                        <stop offset="100%" style="stop-color: rgb(218, 84, 137);"></stop>
+                      </linearGradient>
+                    </defs>
+                    <path fill="url(#gradient)">
+                      <animate attributeName="d"
+                          dur="10000ms"
+                          repeatCount="indefinite"
+                          values="M424,293.5Q446,337,409,361.5Q372,386,346,425Q320,464,276,443.5Q232,423,199,409Q166,395,118,388Q70,381,72.5,334Q75,287,89.5,253Q104,219,103,180.5Q102,142,119,97.5Q136,53,181,37.5Q226,22,261.5,64Q297,106,345.5,98Q394,90,423,125Q452,160,427,205Q402,250,424,293.5Z;
+                                  M424.5,290Q430,330,383,338Q336,346,323,390.5Q310,435,267.5,462Q225,489,203.5,428Q182,367,161,348.5Q140,330,112.5,307.5Q85,285,104,254Q123,223,115.5,185Q108,147,134.5,121.5Q161,96,196,84.5Q231,73,271,67Q311,61,330.5,100Q350,139,384.5,157Q419,175,419,212.5Q419,250,424.5,290Z;
+                                  M426,279Q379,308,394,367.5Q409,427,352,407Q295,387,260,437.5Q225,488,186.5,457Q148,426,129.5,388.5Q111,351,71.5,323.5Q32,296,70,258Q108,220,124.5,195.5Q141,171,162,153Q183,135,208.5,116.5Q234,98,268,94.5Q302,91,335.5,104.5Q369,118,413.5,137.5Q458,157,465.5,203.5Q473,250,426,279Z;
+                                  M415.5,289Q425,328,419,379.5Q413,431,368.5,454.5Q324,478,279.5,435.5Q235,393,210.5,377Q186,361,123,374.5Q60,388,58.5,339.5Q57,291,67.5,252.5Q78,214,113,195Q148,176,152.5,132.5Q157,89,195,90Q233,91,273,74Q313,57,356,71Q399,85,412.5,128.5Q426,172,416,211Q406,250,415.5,289Z;
+                                  M437.5,282.5Q395,315,403,372Q411,429,354,411Q297,393,262.5,424Q228,455,205.5,410.5Q183,366,158,350.5Q133,335,111,309.5Q89,284,77,247.5Q65,211,83,176.5Q101,142,128.5,114.5Q156,87,193,71.5Q230,56,267,69.5Q304,83,330.5,107Q357,131,361.5,164.5Q366,198,423,224Q480,250,437.5,282.5Z;
+                                  M461,290.5Q433,331,408.5,365Q384,399,338.5,391Q293,383,261.5,412.5Q230,442,202.5,411.5Q175,381,146.5,363.5Q118,346,77,320.5Q36,295,46,252Q56,209,84.5,179.5Q113,150,147.5,141Q182,132,208.5,118Q235,104,276,73.5Q317,43,347,76Q377,109,396.5,142.5Q416,176,452.5,213Q489,250,461,290.5Z;
+                                  M419,288Q420,326,397,357Q374,388,332.5,382Q291,376,257.5,435Q224,494,182.5,467Q141,440,104,411.5Q67,383,66.5,336Q66,289,46.5,246Q27,203,51.5,163Q76,123,108,91.5Q140,60,184,52.5Q228,45,261.5,79Q295,113,344.5,101.5Q394,90,380,144Q366,198,392,224Q418,250,419,288Z">
+                      </animate>
+                    </path>
+                </svg>
+            </div>
+            <div class="contact">
+                <form class="contact-form" action="" method="POST">
+                    {% csrf_token %}
+                    <label for="contact-name">Enter Name<span style="color: yellow">*</span></label>
+                    <input class="form-control" name="contact-name" type="text" id="contact-name" placeholder="Enter Name">
+                    
+                    <label for="contact-email">Enter Contact Info<span style="color: yellow">*</span></label>
+                    <input class="form-control" name="contact-email" type="text" id="contact-email" placeholder="Enter Email Address/Phone no">
+        
+                    <label for="contact-project-name">Enter Project Name</label>
+                    <input class="form-control" type="text" name="contact-project-name" id="contact-project-name" placeholder="Enter Project Name">
+        
+                    <label for="contact-project-desp">Enter Project Details</label>
+                    <textarea class="form-control" name="contact-project-desp" id="contact-project-desp" cols="30" rows="5" placeholder="Describe your project"></textarea>
+        
+                    <label for="contact-project-quote">Enter Project Quotation</label>
+                    <input class="form-control" type="text" name="contact-project-quote" id="contact-project-quote" placeholder="Enter initial offering">
+                
+                    <button style="margin-top: 1rem;" class="btn btn-primary" type="submit">Submit</button><br>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(".alert").alert('close')
+    </script>
+</body>
+</html>

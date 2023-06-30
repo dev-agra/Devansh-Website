@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <!-- Favicon -->
+    {% load static %}<link style="border-radius: 100%;" rel="icon" href="{% static 'devansh/images/favicon_io/favicon.ico'%}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=El+Messiri&family=Syncopate:wght@700&family=Viga&family=Ubuntu:wght@700&family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Oswald:wght@700&family=Raleway:ital,wght@1,300;1,600&family=Nunito:wght@900&family=Acme&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    {% load static %}<link rel="stylesheet" href="{% static 'devansh/main.css'%}">
+
+    <!-- Awesome Font -->
+    <script src="https://kit.fontawesome.com/89baad1ea2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section class="Menu" id="Home">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="{% url 'devansh:Home' %}" data-text="home">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'devansh:Contact' %}" data-text="home">Contact</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'devansh:Feedback' %}" data-text="home">Feedback</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'devansh:About' %}" data-text="home">About</a>
+            </li>
+        </ul>
+    </section>
+
+    <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+    <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <section class="intro">
+        <div class="row" style="overflow: hidden;">
+            <div class="col col-lg-12 col-md-6 col-sm-6 col-intro" style="z-index: 1; display: flex; flex-direction: column;justify-content: center;align-items: center;">
+                <ul class="name">
+                    <li>D</li>
+                    <li>e</li>
+                    <li>v</li>
+                    <li>a</li>
+                    <li>n</li>
+                    <li>s</li>
+                    <li>h</li>
+                    <li class="space-text">&nbsp;</li>
+                    <li>A</li>
+                    <li>g</li>
+                    <li>r</li>
+                    <li>a</li>
+                    <li>h</li>
+                    <li>a</li>
+                    <li>r</li>
+                    <li>i</li>
+                </ul>
+                {% load static %}<img class="devansh-img" src="{% static 'devansh/images/devansh-main.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <section class="tech-stack-wall">
+        <div class="row" style="width: 100%;">
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/html-logo.png' %}" alt="html-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name">
+                            <h2>HTML | CSS<br><br><p>Laying out website designs and creating robust web apps</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/aws.png' %}" alt="css-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name">
+                            <h2>AWS<br><br><p>Application Deployment on Elastic Beanstalk, S3, RDS, IAM</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/js-logo.png' %}" alt="js-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <br>
+                        <div class="tech-name">
+                            <h2>Javascript<br><br><p>Clip arts and Animations</p><p>Functionality with Js</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/docker.png' %}" alt="react-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name-list">
+                            <h2>Docker<br><br><p>Containerisation of Python Scripts</p><p>Writing Dockerfile and compose</p><p>Setup CI/CD GitHub Actions pipeline</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/python-logo.png' %}" alt="python-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name-list">
+                            <h2>Python<br><br><p>Web Development</p><p>OpenCV, Yolo processing</p><p>Web Scrapping, Automation, API Injection</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/django.png' %}" alt="django-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name-list">
+                            <h2>Django <br><br><p>Backend Development</p><p>Sessions, Token Authentication</p><p>Celery, Redis, Nginx Proxy, Render</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/drf.png' %}" alt="blockchain-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name-list">
+                            <h2>Django DRF <br><br><p>API Development</p><p>Microservices</p><p>Interfacing with Systems</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/solidity.png' %}" alt="solidity-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name-list">
+                            <h2>Solidity <br><br><p>Remix SMC dev ops w/t Solidity</p><p>Handshake Protocols with Solidity</p><p>Ledger Devlopment</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-3 col-sm-6 col-tech">
+                <div class="card card-tech">
+                    <div class="card-img-x">
+                        {% load static %}<img src="{% static 'devansh/images/sele-logo.png' %}" alt="sele-logo">
+                    </div>
+                    <div class="content content-tech">
+                        <div class="tech-name-list">
+                            <h2>Selenium<br><br><p>Web Automation with Selenium</p><p>Intermediatory Testing with Python</p><p>Scraping w/t BeautifulSoup</p></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Projects">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner" style="color: white;">
+                <div class="carousel-item active" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <div class="card-pro-img-x">
+                                {% load static %}<img src="{% static 'devansh/images/pharmafriend.png' %}" alt="project-states">
+                            </div>
+                            <div class="content content-project">
+                                <div class="project-name-head">P1</div>
+                                <div class="project-name-list">
+                                    <h2>PharmaFriend<br><br><p>Web App to compare medicine prices on E-pharmacies</p><p>Other Features include-Searching Medicines, Medical Stores, and a SaaS product in form of E-pharmacy</p><p>Python | Django | JavaScript | Selenium</p></h2>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <div class="card-pro-img-x">
+                                {% load static %}<img src="{% static 'devansh/images/project-flamescope.png' %}" alt="project-nft">
+                            </div>
+                            <div class="content content-project">
+                                <div class="project-name-head">P2</div>
+                                <div class="project-name-list">
+                                    <h2>FlameScope<br><br><p>Web App to detect fire using CCTV live feed</p><p>User Oriented with various features</p><p>Python | Yolo | JavaScript</p></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <div class="card-pro-img-x">
+                                {% load static %}<img src="{% static 'devansh/images/project-stocks.png' %}" alt="project-stocks">
+                            </div>
+                            <div class="content content-project">
+                                <div class="project-name-head">P3</div>
+                                <div class="project-name-list">
+                                    <h2>Aahaar<br><br><p>A multi vendor food ordering setup</p><p>Incorporates RazorPay</p><p>Python | Django | JavaScript | HTMX</p><p style="color: red;font-size: 18px;">Under Development</p></h2>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <div class="card-pro-img-x">
+                                {% load static %}<img src="{% static 'devansh/images/project-receipe.png' %}" alt="project-gamma">
+                            </div>
+                            <div class="content content-project">
+                                <div class="project-name-head">P4</div>
+                                <div class="project-name-list">
+                                    <h2>DRF Receipe <br><br><p>A DRF API for managing users and recipes</p><p>Hosted on AWS EC2 with Docker containerisation</p><p>Python | Django-DRF | Docker</p></h2>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <div class="card-pro-img-x">
+                                {% load static %}<img src="{% static 'devansh/images/project-ledger.png' %}" alt="project-ledger">
+                            </div>
+                            <div class="content content-project">
+                                <div class="project-name-head">P5</div>
+                                <div class="project-name-list">
+                                    <h2>CrowdLedger<br><br><p>DeFi Ledger</p><p>Hooks Ethereum transactions and stores in a Crowd Ledger</p><p>Solidity | Ethereum | Ganache</p><p style="color: red;font-size: 18px;">Under Development</p></h2>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <div class="card-pro-img-x">
+                                {% load static %}<img src="{% static 'devansh/images/project-sign.png' %}" alt="project-sign">
+                            </div>
+                            <div class="content content-project">
+                                <div class="project-name-head">P6</div>
+                                <div class="project-name-list">
+                                    <h2>Indian Sign Language Detection <br><br><p>Can detect upto 5 sign languages</p><p>Imsge Upload mechanism or a Real Time video feed</p><p>Python | Keras | TensorFlow | ImageFlow</p></h2>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <!-- C:\Programming\Web Development\Devansh Agrahari-Portfolio-Final\Devansh-Website\devansh\static\devansh\images\1-Udemy-Python.png -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <section class="Views">
+        <div class="row" style="width: 100%;">
+            <!-- col col-lg-4 col-md-3 col-sm-6 -->
+            <div class="col col-lg-6 text-container" id="snakegame">
+                <h1>Snake-game</h1>
+            </div>
+            <div class="col col-lg-6 wrapper" id="snakegame1">
+                <div class="game-details">
+                  <span class="score">Score: 0</span>
+                  <span class="high-score">High Score: 0</span>
+                </div>
+                <div class="play-board"></div>
+                <div class="controls">
+                  <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+                  <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+                  <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+                  <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="car-anim">
+        <div class="background">
+            {% load static %}<img class="car" src="{% static 'devansh/images/car.png' %}" alt="car">
+            {% load static %}<img class="bike" src="{% static 'devansh/images/motobike.png' %}" alt="bike">
+        </div>
+    </section>
+
+    <section class="Footer">
+        <div class="footer">
+            <a href="https://github.com/dev-agra"><button class="btn btn-lg btn-block btn-outline-dark" type="button"><i class="fa-brands fa-github"></i></button></a>
+            <a href="https://www.linkedin.com/in/devansh-agrahari-2040b9212/"><button class="btn btn-lg btn-block btn-outline-dark" type="button"><i class="fa-brands fa-linkedin"></i></button></a>
+            <a href="{% url 'devansh:Home' %}"><button class="btn btn-lg btn-block btn-outline-dark" type="button"><i class="fa-brands fa-dev"></i></button></a>
+        </div>
+        <div class="footer-desp">
+            <p>© copyright <span class="span1"> <a href="https://www.linkedin.com/in/devansh-agrahari-2040b9212" style="text-decoration: none;"><strong>Devansh Agrahari</strong></a></span> 2023</p>
+        </div>
+    </section>
+    <script src="{% static 'devansh/js/snakegame.js' %}"></script>
+    <script>
+        const menu = document.querySelector(".Menu");
+
+        document.addEventListener("scroll", () => {
+            if (document.documentElement.scrollTop > 0)
+                menu.classList.add("menu--alt");
+            else
+                menu.classList.remove("menu--alt");
+        })
+
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+        scrollFunction();
+        };
+
+        function scrollFunction() {
+        if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+        ) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
