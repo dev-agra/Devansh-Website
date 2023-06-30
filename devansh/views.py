@@ -4,6 +4,7 @@ from .models import Contact, Feedback
 from django.contrib import messages
 import smtplib
 from datetime import datetime
+from decouple import config
 
 # Validators
 def validate_proid(value):
@@ -16,8 +17,8 @@ def validate_proid(value):
 # Processing Functions
 def sendnote(nameemail,**kwargs):
     with smtplib.SMTP("smtp.gmail.com") as connection:
-        mymail = "gammabytes.sup@gmail.com"
-        password = "vbundywxnqijhwsy"
+        mymail = config('EMAIL_ADDR')
+        password = config('EMIAL_PASS')
 
         connection.starttls()
 
