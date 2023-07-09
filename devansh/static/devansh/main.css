@@ -48,7 +48,7 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 4px;
+    margin-top: 3px;
 }
 
 .menu--alt{
@@ -233,29 +233,6 @@ body{
 
 }
 
-.devansh-img{
-
-    z-index: 1;
-    position: absolute;
-    width: 30rem;
-    object-fit: contain;
-    transform: translateY(100%);
-    transition: 0.9s all ease-out;
-
-}
-
-.col-intro:hover .devansh-img{
-    transform: translateY(13%);
-}
-.space-text{
-    transition: all 0.7s ease-in-out ;
-}
-
-.col-intro:hover .space-text{
-    margin-left: 18rem;
-}
-
-
 
 /* Tech Stack */
 .tech-stack-wall{
@@ -430,7 +407,7 @@ body{
     opacity: 0.5;
 }
 
-/* Projects */
+/* Certificates */
 .Projects{
     padding-top: 5rem;
     position: relative;
@@ -476,16 +453,23 @@ body{
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg,rgb(182, 203, 41), rgb(247, 109, 180) 50%);
-    clip-path: circle(20% at left 35%);
+    clip-path: circle(12% at left 25%);
     animation: motion3 3.35s linear infinite;
     z-index: -1;
 }
 
 @keyframes motion3{
-    0%{clip-path: circle(20% at left 35%);}
-    50%{clip-path: circle(20% at left 60%);}
-    75%{clip-path: circle(20% at left 40%);}
-    100%{clip-path: circle(20% at left 35%);}
+    0%{clip-path: circle(12% at left 35%);}
+    50%{clip-path: circle(12% at left 60%);}
+    75%{clip-path: circle(12% at left 40%);}
+    100%{clip-path: circle(12% at left 35%);}
+}
+
+.card-project img{
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+    /* object-fit: cover; */
 }
 
 .card-project{
@@ -493,197 +477,50 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25rem;
-    height: 15rem;
-    color: black;
-    transition: all 0.5s ease-in;
-    background: linear-gradient(45deg, rgb(42, 113, 184), rgb(159, 57, 133));
-    backdrop-filter: blur(10px);
-}
-
-.card-project:hover{
     width: 50rem;
     height: 30rem;
-    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
 }
 
-.card-pro-img-x{
-    position: absolute;
-    top: -50px;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 100%;
-    overflow: hidden;
-    transition: all 0.4s ease-in;
-    /* transition: all 0.1s ease-out; */
-}
 
-.card-project:hover .card-pro-img-x{
+
+/* Project */
+.card-box {
+    border: 1px solid #1b1258e6;
+    padding: 20px;
+    /* box-shadow: 0px 0px 10px 0px #c5c5c5; */
+    margin-bottom: 30px;
+    float: left;
     border-radius: 10px;
+    box-shadow: 0 35px 50px rgba(24, 17, 54, 0.95);
+    backdrop-filter: blur(15px);
 }
-
-.card-pro-img-x img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.project-name-list{
-    text-align: center;
-    margin-top: 5rem;
-    opacity: 0;
-    transition: all 0.5s;
-    background-color: rgba(43, 42, 42, 0.15);
-    backdrop-filter: blur(35px);
-    border-radius: 10px;
-    padding: 1rem;
-    transform: translateY(50%);
-}
-
-.project-name-list h2{
-    font-family: 'Russo One', sans-serif;
-    font-size: 2.5rem;
-    color: #000;
-    opacity: 1.5;
-}
-
-.project-name-list h2 p{
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.5rem;
-    opacity: 0.8;
-    color: #9c9b9b;
-}
-
-.card-project:hover .project-name-list{
-    opacity: 1;
-    transform: translateY(0);
-    transform: translateY(10%);
-}
-
-
-/* People's View */
-.Views{
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-#snakegame{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#snakegame1{
-    margin: 0 auto;
-}
-
-.text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-container h1{
-  margin: 0;
-  font-size: 100px;
-  color: rgba(225,225,225, .01);
-  background-image: url(images/jungle.jpg);
-  background-repeat: repeat;
-  -webkit-background-clip:text;
-  animation: animate 15s ease-in-out infinite;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-
-@keyframes animate {
-    0%, 100% {
-      background-position: left top;
-    }
-    25%{
-      background-position: right bottom;
-     }
-    50% {
-      background-position: left bottom;
-    }
-    75% {
-      background-position: right top;
-    }   
-}
-
-.wrapper {
-    width: 65vmin;
-    height: 70vmin;
-    display: flex;
+.card-box .card-thumbnail {
+    max-height: 200px;
     overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
-    background: #001e30;
-    border-radius: 16px;
+    border-radius: 10px;
+    transition: 1s;
 }
-.game-details {
-  color: #B8C6DC;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 20px 27px;
-  display: flex;
-  backdrop-filter: blur(15.6px);
-  border: 1px solid rgba(240, 241, 237, 0.54);
-  justify-content: space-between;
+.card-box .card-thumbnail:hover {
+    transform: scale(1.2);
 }
-.play-board {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  background: #212837;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15.6px);
-  -webkit-backdrop-filter: blur(15.6px);
-  border: 1px solid rgba(240, 241, 237, 0.54);
-  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
-}
-.play-board .food {
-  background: #FF003D;
-}
-.play-board .head {
-  background: #60CBFF;
+.card-box h3 a {
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.controls {
-  display: none;
-  justify-content: space-between;
-}
-.controls i {
-  padding: 25px 0;
-  text-align: center;
-  font-size: 1.3rem;
-  color: #B8C6DC;
-  width: calc(100% / 4);
-  cursor: pointer;
-  border-right: 1px solid #171B26;
+.project-name{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 250;
+    color: rgb(237, 234, 234);
 }
 
-@media screen and (max-width: 800px) {
-  .wrapper {
-    width: 90vmin;
-    height: 115vmin;
-  }
-  .game-details {
-    font-size: 1rem;
-    padding: 15px 27px;
-  }
-  .controls {
-    display: flex;
-  }
-  .controls i {
-    padding: 15px 0;
-    font-size: 1rem;
-  }
+.project-desc{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(196, 186, 186);
 }
+
 
 /* Background-Animation */
 .background{

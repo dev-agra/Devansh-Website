@@ -151,12 +151,13 @@ body{
 
 .devansh-img{
     position: relative;
-    width: 23rem;
-    height: 23rem;
+    width: 20rem;
+    height: 20rem;
     object-fit: cover;
     z-index: -1;
-    margin-left: -1.5rem;
-    top: 25px;
+    margin-top: 0.5rem;
+    /* margin-left: -1.5rem; */
+    /* top: 25px; */
 }
 
 @media (max-width: 300px){

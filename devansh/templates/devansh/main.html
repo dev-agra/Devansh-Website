@@ -22,7 +22,7 @@
     
     <!-- CSS -->
     {% load static %}<link rel="stylesheet" href="{% static 'devansh/main.css'%}">
-
+    
     <!-- Awesome Font -->
     <script src="https://kit.fontawesome.com/89baad1ea2.js" crossorigin="anonymous"></script>
 
@@ -42,6 +42,9 @@
             </li>
             <li class="menu-item">
                 <a href="{% url 'devansh:About' %}" data-text="home">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% static 'devansh/pdf/DevanshAgrahari.pdf' %}" download="devansh-resume-07-23" data-text="home">Resume</a>
             </li>
         </ul>
     </section>
@@ -75,7 +78,6 @@
                     <li>r</li>
                     <li>i</li>
                 </ul>
-                {% load static %}<img class="devansh-img" src="{% static 'devansh/images/devansh-main.png' %}" alt="">
             </div>
         </div>
     </section>
@@ -196,6 +198,90 @@
 
 
     <section class="Projects">
+          <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <!-- Bootstrap 5 card box -->
+                    <div class="card-box">
+                        <div class="card-thumbnail">
+                            {% load static %}<img src="{% static 'devansh/images/pharmafriend.png' %}" class="img-fluid" alt="project-sign">
+                        </div>
+                        <h2 class="project-name">PharmaFriend</h2>
+                        <p class="project-desc">Website for comparing pricing of medicines on multiple online platforms. <br> Tech Stack: Python, Django, Javascript, PostgreSQL</p>
+                        <a href="https://github.com/dev-agra/PharmaFriend" class="btn btn-sm btn-danger float-right">GitHub</a>
+                        <a href="#" class="btn btn-sm btn-primary float-right">Demo</a>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-4">
+                    <!-- Bootstrap 5 card box -->
+                    <div class="card-box">
+                        <div class="card-thumbnail">
+                            {% load static %}<img src="{% static 'devansh/images/project-flamescope.png' %}" class="img-fluid" alt="project-sign">
+                        </div>
+                        <h2 class="project-name">FlameScope</h2>
+                        <p class="project-desc">Machine Learning Model that detects fire instances on real-time CCTV camera feed. <br> Tech Stack: Python, Yolo, OpenCV, Javascript</p>
+                        <a href="https://github.com/dev-agra/FlameScope" class="btn btn-sm btn-danger float-right">GitHub</a>
+                        <a href="#" class="btn btn-sm btn-primary float-right">Demo</a>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-4">
+                    <!-- Bootstrap 5 card box -->
+                    <div class="card-box">
+                        <div class="card-thumbnail">
+                            {% load static %}<img src="{% static 'devansh/images/OwnBazaar.png' %}" class="img-fluid" alt="project-sign">
+                        </div>
+                        <h2 class="project-name">OwnBazaar</h2>
+                        <p class="project-desc">Multi Vendor setup with open-marketplace concept for ordering day-to-day consumables<br>Tech Stack: Python, Django, JavaScript</p>
+                        <a href="#" class="btn btn-sm btn-danger float-right">GitHub</a>
+                        <a href="#" class="btn btn-sm btn-primary float-right">Demo</a>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-4">
+                    <!-- Bootstrap 5 card box -->
+                    <div class="card-box">
+                        <div class="card-thumbnail">
+                            {% load static %}<img src="{% static 'devansh/images/project-sign1.png' %}" class="img-fluid" alt="project-sign">
+                        </div>
+                        <h2 class="project-name">Sign Language Detection</h2>
+                        <p class="project-desc">A pre-stage Machine Learning model that identifies and classifies Indian Sign Language <br>Tech Stack: Python, TensorFlow, OpenCV, Jupyter</p>
+                        <a href="https://github.com/dev-agra/IndianSignLanguage" class="btn btn-sm btn-danger float-right">GitHub</a>
+                        <a href="#" class="btn btn-sm btn-primary float-right">Demo</a>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-4">
+                    <!-- Bootstrap 5 card box -->
+                    <div class="card-box">
+                        <div class="card-thumbnail">
+                            {% load static %}<img src="{% static 'devansh/images/receipe-api.png' %}" class="img-fluid" alt="project-sign">
+                        </div>
+                        <h2 class="project-name">ReceipeAPI</h2>
+                        <p class="project-desc">Recipe API with multiple endpoints for operations on user, receipe, ingredients, tags <br>Tech Stack: Python, Django-DRF, Docker, Nginx</p>
+                        <a href="https://github.com/dev-agra/django-app-api" class="btn btn-sm btn-danger float-right">GitHub</a>
+                        <a href="#" class="btn btn-sm btn-primary float-right">Demo</a>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-4">
+                    <!-- Bootstrap 5 card box -->
+                    <div class="card-box">
+                        <div class="card-thumbnail">
+                            {% load static %}<img src="{% static 'devansh/images/blog-api.png' %}" class="img-fluid" alt="project-sign">
+                        </div>
+                        <h2 class="project-name">ArticlesAPI</h2>
+                        <p class="project-desc">Articles API that allows user to fetch, put, patch articles among other operations <br>Tech Stack: Python, DRF, Docker, Celery, Nginx</p>
+                        <a href="https://github.com/dev-agra/Django-API-MEDIUM" class="btn btn-sm btn-danger float-right">GitHub</a>
+                        <a href="#" class="btn btn-sm btn-primary float-right">Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Certificates">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -204,95 +290,79 @@
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
             </div>
             <div class="carousel-inner" style="color: white;">
                 <div class="carousel-item active" data-interval: "1000">
                     <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
                         <div class="card card-project">
-                            <div class="card-pro-img-x">
-                                {% load static %}<img src="{% static 'devansh/images/pharmafriend.png' %}" alt="project-states">
-                            </div>
-                            <div class="content content-project">
-                                <div class="project-name-head">P1</div>
-                                <div class="project-name-list">
-                                    <h2>PharmaFriend<br><br><p>Web App to compare medicine prices on E-pharmacies</p><p>Other Features include-Searching Medicines, Medical Stores, and a SaaS product in form of E-pharmacy</p><p>Python | Django | JavaScript | Selenium</p></h2>
-                                </div>
-                            </div>
+                            <img src="{% static 'devansh/images/cert/Accenture.jpg' %}" class="cert-img" alt="">
                         </div>    
                     </div>
                 </div>
                 <div class="carousel-item" data-interval: "1000">
                     <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
                         <div class="card card-project">
-                            <div class="card-pro-img-x">
-                                {% load static %}<img src="{% static 'devansh/images/project-flamescope.png' %}" alt="project-nft">
-                            </div>
-                            <div class="content content-project">
-                                <div class="project-name-head">P2</div>
-                                <div class="project-name-list">
-                                    <h2>FlameScope<br><br><p>Web App to detect fire using CCTV live feed</p><p>User Oriented with various features</p><p>Python | Yolo | JavaScript</p></h2>
-                                </div>
-                            </div>
+                            <img src="{% static 'devansh/images/cert/Cognizant.png' %}" class="cert-img" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" data-interval: "1000">
                     <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
                         <div class="card card-project">
-                            <div class="card-pro-img-x">
-                                {% load static %}<img src="{% static 'devansh/images/project-stocks.png' %}" alt="project-stocks">
-                            </div>
-                            <div class="content content-project">
-                                <div class="project-name-head">P3</div>
-                                <div class="project-name-list">
-                                    <h2>Aahaar<br><br><p>A multi vendor food ordering setup</p><p>Incorporates RazorPay</p><p>Python | Django | JavaScript | HTMX</p><p style="color: red;font-size: 18px;">Under Development</p></h2>
-                                </div>
-                            </div>
+                            <img src="{% static 'devansh/images/cert/AWS.png' %}" class="cert-img" alt="">
                         </div>    
                     </div>
                 </div>
                 <div class="carousel-item" data-interval: "1000">
                     <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
                         <div class="card card-project">
-                            <div class="card-pro-img-x">
-                                {% load static %}<img src="{% static 'devansh/images/project-receipe.png' %}" alt="project-gamma">
-                            </div>
-                            <div class="content content-project">
-                                <div class="project-name-head">P4</div>
-                                <div class="project-name-list">
-                                    <h2>DRF Receipe <br><br><p>A DRF API for managing users and recipes</p><p>Hosted on AWS EC2 with Docker containerisation</p><p>Python | Django-DRF | Docker</p></h2>
-                                </div>
-                            </div>
+                            <img src="{% static 'devansh/images/cert/Codespire.png' %}" class="cert-img" alt="">
                         </div>    
                     </div>
                 </div>
                 <div class="carousel-item" data-interval: "1000">
                     <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
                         <div class="card card-project">
-                            <div class="card-pro-img-x">
-                                {% load static %}<img src="{% static 'devansh/images/project-ledger.png' %}" alt="project-ledger">
-                            </div>
-                            <div class="content content-project">
-                                <div class="project-name-head">P5</div>
-                                <div class="project-name-list">
-                                    <h2>CrowdLedger<br><br><p>DeFi Ledger</p><p>Hooks Ethereum transactions and stores in a Crowd Ledger</p><p>Solidity | Ethereum | Ganache</p><p style="color: red;font-size: 18px;">Under Development</p></h2>
-                                </div>
-                            </div>
+                            <img src="{% static 'devansh/images/cert/TechSparks.png' %}" class="cert-img" alt="">
                         </div>    
                     </div>
                 </div>
                 <div class="carousel-item" data-interval: "1000">
                     <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
                         <div class="card card-project">
-                            <div class="card-pro-img-x">
-                                {% load static %}<img src="{% static 'devansh/images/project-sign.png' %}" alt="project-sign">
-                            </div>
-                            <div class="content content-project">
-                                <div class="project-name-head">P6</div>
-                                <div class="project-name-list">
-                                    <h2>Indian Sign Language Detection <br><br><p>Can detect upto 5 sign languages</p><p>Imsge Upload mechanism or a Real Time video feed</p><p>Python | Keras | TensorFlow | ImageFlow</p></h2>
-                                </div>
-                            </div>
+                            <img src="{% static 'devansh/images/cert/PythonHub.png' %}" class="cert-img" alt="">
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <img src="{% static 'devansh/images/cert/Python.png' %}" class="cert-img" alt="">
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <img src="{% static 'devansh/images/cert/CAdv.jpg' %}" class="cert-img" alt="">
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <img src="{% static 'devansh/images/cert/Java.jpeg' %}" class="cert-img" alt="">
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval: "1000">
+                    <div class="container container-project" style="width:60%;height: 40rem;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <div class="card card-project">
+                            <img src="{% static 'devansh/images/cert/Django.png' %}" class="cert-img" alt="">
                         </div>    
                     </div>
                 </div>
@@ -307,28 +377,6 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-    </section>
-
-    <section class="Views">
-        <div class="row" style="width: 100%;">
-            <!-- col col-lg-4 col-md-3 col-sm-6 -->
-            <div class="col col-lg-6 text-container" id="snakegame">
-                <h1>Snake-game</h1>
-            </div>
-            <div class="col col-lg-6 wrapper" id="snakegame1">
-                <div class="game-details">
-                  <span class="score">Score: 0</span>
-                  <span class="high-score">High Score: 0</span>
-                </div>
-                <div class="play-board"></div>
-                <div class="controls">
-                  <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
-                  <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
-                  <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
-                  <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
-                </div>
-            </div>
-        </div>
     </section>
     
     <section class="car-anim">
