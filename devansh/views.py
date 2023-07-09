@@ -18,7 +18,7 @@ def validate_proid(value):
 def sendnote(nameemail,**kwargs):
     with smtplib.SMTP("smtp.gmail.com") as connection:
         mymail = config('EMAIL_ADDR')
-        password = config('EMIAL_PASS')
+        password = config('EMAIL_PASS')
 
         connection.starttls()
 
