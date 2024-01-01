@@ -626,6 +626,11 @@ body{
     background: url();
 }
 
+#current-year {
+    font-size: 1.6rem;
+    padding-left: .29rem;
+}
+
 
 @media (max-width:405px){
     .bike{
@@ -643,6 +648,10 @@ body{
     .box{
         top: 23%;
         left: 31.9%;
+    }
+
+    #current-year {
+        font-size: 1rem;
     }
 
     .footer-desp p, .footer-desp .span1, .footer-desp span{

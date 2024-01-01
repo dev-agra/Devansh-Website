@@ -393,9 +393,15 @@
             <a href="{% url 'devansh:Home' %}"><button class="btn btn-lg btn-block btn-outline-dark" type="button"><i class="fa-brands fa-dev"></i></button></a>
         </div>
         <div class="footer-desp">
-            <p>© copyright <span class="span1"> <a href="https://www.linkedin.com/in/devansh-agrahari-2040b9212" style="text-decoration: none;"><strong>Devansh Agrahari</strong></a></span> 2023</p>
+            <div class="footer">
+                <p>&copy; <span id="current-year"></span> <a href="https://www.linkedin.com/in/devansh-agrahari-2040b9212" style="text-decoration: none;"><strong>Devansh Agrahari</strong></a></p>
+            </div>
         </div>
     </section>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("current-year").textContent = currentYear;
+    </script>
     <script src="{% static 'devansh/js/snakegame.js' %}"></script>
     <script>
         const menu = document.querySelector(".Menu");
