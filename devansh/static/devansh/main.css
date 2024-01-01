@@ -610,6 +610,11 @@ body{
     margin-top: 10rem;
 }
 
+.footer-desp #current-year{
+    font-size: 1.6rem;
+    padding-left: .29rem;
+}
+
 .blob{
     position: absolute;
     width: 30rem;
@@ -624,11 +629,6 @@ body{
 .card-01::before{
     content: '';
     background: url();
-}
-
-#current-year {
-    font-size: 1.6rem;
-    padding-left: .29rem;
 }
 
 
@@ -650,7 +650,7 @@ body{
         left: 31.9%;
     }
 
-    #current-year {
+    .footer-desp #current-year{
         font-size: 1rem;
     }
 
